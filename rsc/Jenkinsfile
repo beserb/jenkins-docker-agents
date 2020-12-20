@@ -3,13 +3,14 @@ pipeline {
     //    docker { image 'node:14-alpine' }
     //}
     agent {
-        dockerfile {
+        //dockerfile {
             //filename 'Dockerfile.build'
-            dir 'rsc'
+            //dir 'rsc'
             //label 'master'
             //additionalBuildArgs  '--build-arg version=1.0.2'
             //args '-v /tmp:/tmp'
-        }
+        //}
+        dockerfile true
     }
     stages {
         stage('Test') {
