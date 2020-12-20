@@ -6,7 +6,7 @@ pipeline {
         dockerfile {
             //filename 'Dockerfile.build'
             dir 'rsc'
-            label 'node-build-environment'
+            //label 'master'
             //additionalBuildArgs  '--build-arg version=1.0.2'
             //args '-v /tmp:/tmp'
         }
