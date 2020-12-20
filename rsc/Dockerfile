@@ -10,6 +10,8 @@ USER node
 
 RUN npm install
 
+RUN npm --version
+
 COPY --chown=node:node . .
 
 EXPOSE 8090
