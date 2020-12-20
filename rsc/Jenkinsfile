@@ -1,6 +1,15 @@
 pipeline {
+    //agent {
+    //    docker { image 'node:14-alpine' }
+    //}
     agent {
-        docker { image 'node:14-alpine' }
+        dockerfile {
+            //filename 'Dockerfile.build'
+            dir 'rsc'
+            label 'node-build-environment'
+            //additionalBuildArgs  '--build-arg version=1.0.2'
+            //args '-v /tmp:/tmp'
+        }
     }
     stages {
         stage('Test') {
