@@ -5,9 +5,23 @@
   "author": "Sammy the Shark <sammy@example.com>",
   "license": "MIT",
   "main": "app.js",
+  "bin": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pkg": "pkg ."
+  },
+  "pkg": {
+    "assets": [
+      "views/**/*.html",
+      "views/**/*.css"
+    ],
+    "scripts": [
+      "*.js"
+    ],
+    "targets": [
+      "node14-win-x64"
+    ]
   },
   "keywords": [
     "nodejs",
@@ -16,5 +30,8 @@
   ],
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.9"
   }
 }
